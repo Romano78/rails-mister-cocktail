@@ -1,0 +1,13 @@
+.cocktail-form-container {
+  width: 85%;
+  margin-top: 20px;
+}
+
+.edit_cocktail {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,30 @@
+<div class="cocktail-wrapper">
+  <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <h2 style="font-size: 50px"><%= @cocktail.name  %></h2>
+  </div>
+
+  <div class="cocktail-body-wrapper">
+    <div class="cocktail-body-content">
+      <div class="cocktail-des">
+        <h3>Description</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          si non quae cum quam asperiores voluptatem, saepe ut vel id adipisci.</p>
+        <div class="cocktail-ingredients">
+            <h3 style="text-decoration: underline;">Ingredients: </h3>
+          <% @cocktail.doses.each do |dose| %>
+            <div class="cocktail-ing-content">
+              <p style="padding-right: 10px;"><%= dose.description  %>: </p>
+              <p><%= dose.ingredient.name  %></p>
+              <%= link_to '<i class="far fa-trash-alt"></i>'.html_safe, dose_path(dose),  method: :delete,
+                    data: { confirm: "Are you sure?" } %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+        <div class='cocktail-ingredients'>
+          <h4>Add Ingredients:</h4>
+          <%= render 'doses/new', cocktail: @cocktail, dose: @dose %>
+        </div>
+    </div>
+  </div>
+</div>

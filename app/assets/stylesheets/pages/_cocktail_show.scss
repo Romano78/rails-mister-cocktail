@@ -1,0 +1,92 @@
+.cocktail-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.cocktail-card {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.cocktail-body-wrapper {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin-top: -24px;
+  background: white;
+
+  @media (min-width: 1100px) {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+}
+
+.cocktail-body-content {
+  width: 100%;
+  min-height: 300px;
+  position: relative;
+
+  @media (min-width: 1100px) {
+    display: flex;
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+    margin-top: -25px;
+  }
+
+  //   &:before {
+  //     content: "";
+  //     width: 35%;
+  //     border: 1px solid #ccc;
+  //     position: absolute;
+  //     height: 1px;
+  //     left: 412px;
+  //     bottom: 149px;
+  //     transform: rotate(90deg);
+  //   }
+}
+
+.cocktail-des {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  @media (min-width: 1100px) {
+    padding: 20px 40px 0 20px;
+    border-right: 1px solid #ccc;
+  }
+}
+
+.cocktail-ingredients {
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: 1100px) {
+    width: 100%;
+    display: block;
+    padding: 20px;
+  }
+}
+
+.cocktail-ing-content {
+  display: flex;
+  width: 100%;
+  a {
+    padding-left: 10px;
+    color: red;
+  }
+}

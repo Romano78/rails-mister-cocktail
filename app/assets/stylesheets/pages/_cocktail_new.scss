@@ -1,0 +1,22 @@
+.cocktail-form-wrapper {
+  width: 600px;
+  margin: 0 auto;
+
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.cocktail-form-container {
+}
+
+#new_cocktail {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    margin-bottom: 15px;
+  }
+}

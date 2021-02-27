@@ -1,0 +1,30 @@
+.content-wrapper {
+  width: 100%;
+  max-width: 1444px;
+  margin: 0 auto;
+}
+
+.cocktail-title {
+  margin-top: 20px;
+  h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+}
+
+.cocktail-list-container {
+  background: white;
+  padding: 20px;
+  margin: 40px 20px 0 40px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  flex-grow: 1;
+}
+.cocktail-list {
+  display: flex;
+  margin-bottom: 40px;
+  h3 {
+    text-align: center;
+  }
+  flex-wrap: wrap;
+}

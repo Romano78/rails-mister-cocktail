@@ -1,0 +1,26 @@
+.home-body-wrapper {
+  height: 81vh;
+}
+
+.banner-container {
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://source.unsplash.com/1500x700/?cocktails");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  h1 {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 20px;
+  }
+}
