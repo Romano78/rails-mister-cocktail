@@ -1,0 +1,8 @@
+<div class="cocktail-form-container">
+    <%= simple_form_for  [@cocktail, @review] do |f| %>
+        <%= f.input :content %>
+        <%= f.submit "Submit Review", class: "btn btn-primary" %>
+    <% end %>
+</div>
+
+

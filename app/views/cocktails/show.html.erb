@@ -1,5 +1,5 @@
 <div class="cocktail-wrapper">
-  <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @cocktail.photo.key %>)">
     <h2 style="font-size: 50px"><%= @cocktail.name  %></h2>
   </div>
 
@@ -25,6 +25,16 @@
           <h4>Add Ingredients:</h4>
           <%= render 'doses/new', cocktail: @cocktail, dose: @dose %>
         </div>
+    </div>
+    <div class="cocktail-reviews">
+      <h3>Reviews:</h3>
+      <% @cocktail.reviews.each do |review| %>
+        <p><%= review.content %></p>
+      <% end %>
+    </div>
+    <div class='cocktail-ingredients'>
+      <h4>Add Review:</h4>
+      <%= render 'reviews/new', cocktail: @cocktail, dose: @dose %>
     </div>
   </div>
 </div>

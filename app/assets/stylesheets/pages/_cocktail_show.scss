@@ -42,6 +42,7 @@
     min-height: 300px;
     position: relative;
     margin-top: -25px;
+    border-bottom: 1px solid #ccc;
   }
 
   //   &:before {
@@ -89,4 +90,9 @@
     padding-left: 10px;
     color: red;
   }
+}
+
+.cocktail-reviews {
+  padding-left: 20px;
+  margin-top: 20px;
 }

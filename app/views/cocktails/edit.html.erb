@@ -4,8 +4,8 @@
     </div>
     <div class="cocktail-form-container">
         <%= simple_form_for  @cocktail do |f| %>
-            <%= f.label :name %>
-            <%= f.text_field :name %>
+            <%= f.input :name %>
+            <%= f.input :photo, as: :file %>
             <%= f.submit "Submit Cocktail", class: "btn btn-primary" %>
         <% end %>
     </div>
