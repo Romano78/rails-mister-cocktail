@@ -1,7 +1,10 @@
 class CocktailsController < ApplicationController
   before_action :set_cocktail, only: %i[show edit update destroy]
+  skip_before_action :authenticate_user!
+
   def index
     @cocktails = Cocktail.all
+    @user = current_user if current_user
   end
 
   def show

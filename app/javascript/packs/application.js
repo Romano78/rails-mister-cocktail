@@ -11,6 +11,7 @@ import "bootstrap";
 import { initUpdateNavBarScroll } from "../components/navbar";
 import { initSelect2 } from "../components/select2";
 import { initSweetalert } from "../components/sweetAlert";
+import { initFlash } from "../components/flash";
 
 Rails.start();
 Turbolinks.start();
@@ -19,6 +20,7 @@ ActiveStorage.start();
 document.addEventListener("turbolinks:load", () => {
   initUpdateNavBarScroll();
   initSelect2();
+  initFlash();
 
   initSweetalert(
     "#sweet-alert-demo",
