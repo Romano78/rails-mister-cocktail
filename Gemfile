@@ -7,6 +7,8 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 
+gem 'devise'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3'
 # Use postgresql as the database for Active Record
@@ -29,14 +31,12 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: %i[development test]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'cloudinary', '~> 1.16.0'
-
-
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -54,8 +54,7 @@ group :development do
   gem 'spring'
 end
 
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'rails-controller-testing', group: [:test]
+gem 'rspec-rails', group: [:test]
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-gem 'rspec-rails', group: [ :test ]
-gem 'rails-controller-testing', group: [ :test ]

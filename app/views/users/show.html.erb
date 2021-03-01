@@ -1,0 +1,8 @@
+<h2>Welcolme</h2>
+
+<% if current_user %>
+  <%= current_user.name %>
+  <%= current_user.last_name %>
+
+  <%= link_to 'Edit Profile', edit_user_registration_path  %>
+<% end %>
