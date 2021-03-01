@@ -4,15 +4,16 @@
     </div>
     <div class="cocktail-list">
         <% @cocktails.each do |cocktail| %>
-         <div class="cocktail-list-container">
-          <h3><%= cocktail.name %></h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione totam maiores nesciunt perspiciatis aliquam officia, accusantium maxime aliquid facilis dignissimos, autem, id praesentium vel. Blanditiis.</p>
-         <div class="cocktail-footer">
-            <%= link_to 'About', cocktail_path(cocktail)  %>
-            <%= link_to 'Edit', edit_cocktail_path(cocktail) %>
-             <%= link_to '<i class="far fa-trash-alt"></i>'.html_safe, cocktail_path(cocktail),  method: :delete,
-                    data: { confirm: "Are you sure?" }, class: 'delete-button' %>
-         </div>
+            <div class="cocktail-list-container">
+                <h3><%= cocktail.name %></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione totam maiores nesciunt perspiciatis aliquam officia, accusantium maxime aliquid facilis dignissimos, autem, id praesentium vel. Blanditiis.</p>
+                <div class="cocktail-footer">
+                    <%= link_to 'About', cocktail_path(cocktail)  %>
+                    <%= link_to 'Edit', edit_cocktail_path(cocktail) %>
+                    <button id="sweet-alert-demo" class="delete-button"><i class="far fa-trash-alt"></i></button>
+                    <%= link_to "", cocktail_path(cocktail), method: :delete, id: "delete-link", class: "hidden" %>
+                </div>
+            </div>
         <% end %>
     </div>
 </div>

@@ -8,34 +8,14 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body>
-    <div class="body-wrapper">
-      <div class="home-navbar">
-          <ul class="navbar-nav-container">
-            <li class="nav-item active">
-            <%= link_to "Home", '/', class: "nav-link" %>
-            </li>
-            <li>
-            <%= link_to "Cocktails", cocktails_path, class: "nav-link" %>
-            </li>
-          </ul>
-      </div>  
+    <div class="page-wrapper">
+      <%= render 'components/navbar' %>
       <%= yield %>
-      <div class="footer">
-        <div class="footer-links">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <div class="footer-copyright">
-          This footer is made with <i class="fas fa-heart"></i> at Le Wagon
-        </div>
-      </div>
+      <%= render 'components/footer' %>
     </div>
   </body>
 </html>

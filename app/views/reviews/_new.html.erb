@@ -1,7 +1,9 @@
 <div class="cocktail-form-container">
     <%= simple_form_for  [@cocktail, @review] do |f| %>
         <%= f.input :content %>
-        <%= f.submit "Submit Review", class: "btn btn-primary" %>
+        <button class="upload-button upload-button--pan">
+            <%= f.submit "Submit Review", class: 'submit-input-review'%>
+        </button>
     <% end %>
 </div>
 

@@ -6,7 +6,9 @@
         <%= simple_form_for  @cocktail do |f| %>
             <%= f.input :name %>
             <%= f.input :photo, as: :file %>
-            <%= f.submit "Submit Cocktail", class: "btn btn-primary" %>
+             <button class="upload-button upload-button--pan">
+                <%= f.submit "Submit Cocktail", class: 'submit-input-review'%>
+            </button>
         <% end %>
     </div>
 </div>

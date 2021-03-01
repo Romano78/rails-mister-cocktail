@@ -9,14 +9,22 @@
   }
 }
 
-.cocktail-form-container {
-}
-
 #new_cocktail {
   display: flex;
   flex-direction: column;
 
   input {
     margin-bottom: 15px;
+  }
+}
+
+.dose_ingredient {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    &:focus {
+      outline: none;
+    }
   }
 }
