@@ -8,6 +8,7 @@ class DosesController < ApplicationController
     @dose = Dose.new(dose_param)
     @cocktail = Cocktail.find(params[:cocktail_id])
     @dose.cocktail = @cocktail
+    authorize @dose
 
     if @dose.save
       redirect_to cocktail_path(@cocktail)
@@ -20,6 +21,7 @@ class DosesController < ApplicationController
 
   def destroy
     @dose = Dose.find(params[:id])
+    authorize @dose
 
     @dose.delete
 
