@@ -10,22 +10,28 @@ class CocktailsController < ApplicationController
   def show
     @dose = Dose.new
     @review = Review.new
+    @user = current_user
   end
 
   def new
     @cocktail = Cocktail.new
+    @user = current_user
   end
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
+    @cocktail.user = current_user
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
+      @user = current_user
       render :new
     end
   end
 
-  def edit; end
+  def edit
+    @user = current_user
+  end
 
   def update
     @cocktail.update(cocktail_params)

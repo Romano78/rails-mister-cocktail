@@ -11,6 +11,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to cocktail_path(@cocktail)
     else
+      @user = current_user
       @dose = Dose.new
       render 'cocktails/show'
     end

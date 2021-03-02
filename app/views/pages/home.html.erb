@@ -2,9 +2,15 @@
     <div class="banner-container">
         <div class="banner-content">
             <h1>Mister Cocktails</h1>
-            <div>
-                <%= link_to 'Create A Cocktail', new_cocktail_path, class: 'create-button-link'  %>
-            </div>
+            <% if user_signed_in? %>
+                <div>
+                    <%= link_to 'Create A Cocktail', new_cocktail_path, class: 'create-button-link'  %>
+                </div>
+                <% else %>
+                <div>
+                    <%= link_to 'Create A Cocktail',  user_session_path, class: 'create-button-link'  %>
+                </div>
+            <% end %>
         </div>
     </div>
 </div>
