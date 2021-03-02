@@ -15,6 +15,10 @@
     <div class="page-wrapper">
       <%= render 'components/navbar' %>
       <%= yield %>
+
+      <div class="flash-alert">
+        <%= render 'shared/flashes' %>      
+      </div>
       <%= render 'components/footer' %>
     </div>
   </body>

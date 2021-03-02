@@ -1,5 +1,6 @@
 const alertDismissible = document.querySelector(".alert-dismissible");
 
+console.log(alertDismissible);
 const initFlash = () => {
   if (alertDismissible) {
     setTimeout(() => {

@@ -8,9 +8,11 @@ class ReviewsController < ApplicationController
     @cocktail = Cocktail.find(params[:cocktail_id])
     @review = Review.new(review_params)
     @review.cocktail = @cocktail
+    authorize @review
     if @review.save
       redirect_to cocktail_path(@cocktail)
     else
+      @user = current_user
       @dose = Dose.new
       render 'cocktails/show'
     end

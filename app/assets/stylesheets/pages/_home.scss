@@ -4,6 +4,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: #eee;
+  position: relative;
 }
 
 .form-control:focus {
@@ -19,4 +20,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.flash-alert {
+  position: absolute;
+  bottom: 13%;
+  right: 0;
 }

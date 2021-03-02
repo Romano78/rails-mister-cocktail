@@ -9,9 +9,13 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione totam maiores nesciunt perspiciatis aliquam officia, accusantium maxime aliquid facilis dignissimos, autem, id praesentium vel. Blanditiis.</p>
                 <div class="cocktail-footer">
                     <%= link_to 'About', cocktail_path(cocktail)  %>
-                    <%= link_to 'Edit', edit_cocktail_path(cocktail) %>
-                    <button id="sweet-alert-demo" class="delete-button"><i class="far fa-trash-alt"></i></button>
-                    <%= link_to "", cocktail_path(cocktail), method: :delete, id: "delete-link", class: "hidden" %>
+                    <% if user_signed_in? %>
+                        <% if policy(cocktail).edit? || policy(cocktail).destroy?%>
+                        <%= link_to 'Edit', edit_cocktail_path(cocktail) %>
+                        <button id="sweet-alert-demo" class="delete-button"><i class="far fa-trash-alt"></i></button>
+                        <%= link_to "", cocktail_path(cocktail), method: :delete, id: "delete-link", class: "hidden" %>
+                        <% end %>
+                    <% end %>
                 </div>
             </div>
         <% end %>
